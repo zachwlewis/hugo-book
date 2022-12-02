@@ -6,3 +6,15 @@
     display: flex;
     justify-content: space-between;
 }
+
+.item-nav.top {
+    padding-bottom: $padding-16;
+    margin-bottom: $padding-16;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.item-nav.bottom {
+    padding-top: $padding-16;
+    margin-top: $padding-16;
+    border-top: 1px solid var(--gray-100);
+}
