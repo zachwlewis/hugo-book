@@ -1,15 +1,16 @@
 {{ if or .NextInSection .PrevInSection }}
 <nav class="item-nav bottom">
     <div class="next-item">
-        {{ if .NextInSection }}
-        <a class="link-reverse" href="{{ .NextInSection.Permalink }}?ref=footer">« {{ .NextInSection.Title | truncate 50 "..." }}</a>
+        {{ if .PrevInSection }}
+        <a class="link-reverse" href="{{ .PrevInSection.Permalink }}?ref=footer">« {{ .PrevInSection.Title | truncate 50 "..."}}</a>
         {{ end }}
     </div>
 
     <div class="previous-item">
-        {{ if .PrevInSection }}
-        <a class="link-reverse" href="{{ .PrevInSection.Permalink }}?ref=footer">{{ .PrevInSection.Title | truncate 50 "..."}} »</a>
+        {{ if .NextInSection }}
+        <a class="link-reverse" href="{{ .NextInSection.Permalink }}?ref=footer">{{ .NextInSection.Title | truncate 50 "..." }} »</a>
         {{ end }}
+
     </div>
 </nav>
 {{ end }}
